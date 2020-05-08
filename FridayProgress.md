@@ -9,7 +9,7 @@
 * Linked me to [A Guide to Web Scraping with Node.js](https://www.youtube.com/watch?v=dXjKh66BR2U)
 * Linked me to [Intro To Web Scraping With Node.js & Cheerio](https://www.youtube.com/watch?v=LoziivfAAjE) 
 * Following [Build A Web Scraper With Node](https://pusher.com/tutorials/web-scraper-node)
-* 
+* Linked me to [How to Build a DIY Web Scraper in Any Language](https://levelup.gitconnected.com/how-to-build-a-diy-web-scraper-in-any-language-1104ac0713cd) 
 * 
 * 
 * 
