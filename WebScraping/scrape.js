@@ -24,13 +24,29 @@ request("https://comptrain.co/wod/", (error, response, html) => {
 
     $('.wod-info p').each((i, el) => {
       const item = $(el).text();
-      // const link = $(el).attr('href');
 
       console.log(item);
-      // console.log(link);
     });
   }
     else {
     console.log("nope");
   }
 });
+
+//     $('.wod-info h3').each((i, el) => {
+//       const item = $(el).text();
+//       if (item === "OPEN PREP") {
+//         console.log(item);
+//         $('.wod-info p').each((i, k) => {
+//           const wod = $(k).text();
+//           console.log(wod);
+//         });
+//       } else {
+//       console.log("second conditional failed")
+//       } 
+//     });
+//   }
+//     else {
+//     console.log("nope");
+//   }
+// });
