@@ -5,6 +5,14 @@ request("https://comptrain.co/wod/", (error, response, html) => {
   if (!error && response.statusCode == 200) {
     // console.log(html);
     const $ = cheerio.load(html);
+
+    const wodDate = $(".wod-date");
+    // console.log(wodDate.html);
+    // console.log(wodDate.text);
+    const output = wodDate.find('h5').text();
+    console.log(output);
+    // const output = wodDate.children("h5").text();
+    // console.log(output);
   }
 });
 
