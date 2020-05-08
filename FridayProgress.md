@@ -8,8 +8,7 @@
 * Following [The Ultimate Guide to Web Scraping nwith Node.js](https://www.freecodecamp.org/news/the-ultimate-guide-to-web-scraping-with-node-js-daa2027dcd3/)
 * Linked me to [A Guide to Web Scraping with Node.js](https://www.youtube.com/watch?v=dXjKh66BR2U)
 * Linked me to [Intro To Web Scraping With Node.js & Cheerio](https://www.youtube.com/watch?v=LoziivfAAjE) 
-* 
-* 
+* Following [Build A Web Scraper With Node](https://pusher.com/tutorials/web-scraper-node)
 * 
 * 
 * 
