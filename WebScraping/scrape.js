@@ -22,11 +22,16 @@ request("https://comptrain.co/wod/", (error, response, html) => {
     //   .text();
     // console.log(output4);
 
-    $('.wod-info p').each((i, el) => {
-      const item = $(el).text();
-
-      console.log(item);
+    $(".wod-date h5").each((i, j) => {
+      const date = $(j).text();
+      console.log(date);
     });
+
+    // $('.wod-info p').each((i, k) => {
+    //   const item = $(k).text();
+
+    //   console.log(item);
+    // });
   }
     else {
     console.log("nope");
