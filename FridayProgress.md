@@ -12,7 +12,7 @@
 * Linked me to [How to Build a DIY Web Scraper in Any Language](https://levelup.gitconnected.com/how-to-build-a-diy-web-scraper-in-any-language-1104ac0713cd) 
 * Working through [puppeteer walkthrough](https://github.com/puppeteer/puppeteer)
 * Moving onto another video. I am having a hard time with STOPPING my scrape once I have the information that I need. I hope that [WEB SCRAPING made simple with JAVASCRIPT tutorial](https://www.youtube.com/watch?v=TzZ3YOUhCxo) will be of a bit more assistance. This guy makes pretty solid videos. 
-* 
+* Learning about puppeteer recorder and how to use await click with x paths [Puppeteer Series Part 5: Search result click element](https://www.youtube.com/watch?v=JN7HGnZo0c8)
 * 
 * 
 * 
