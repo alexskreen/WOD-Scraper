@@ -37,13 +37,13 @@ request("https://comptrain.co/wod/", (error, response, html) => {
     $('.site').each((i, k) => {
       const date = $(k)
       .find('.wod-date')
-      .text();
-      console.log(date);
+      .text()
+      .replace(/\s\s+/g, '');
+
       const wod = $(k)
       .find('.wod-info')
       .text();
-      console.log(wod);
-
+      console.log(date, wod);
     });
   }
     else {
