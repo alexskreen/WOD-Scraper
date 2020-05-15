@@ -3,11 +3,13 @@ const cheerio = require('cheerio');
 
 request("https://comptrain.co/wod/", (error, response, html) => {
   if (!error && response.statusCode == 200) {
-    // console.log(html);
     const $ = cheerio.load(html);
 
     const wodDate = $(".wod-date");
     const wodInfo = $(".wod-info");
+
+    // examples of things we can do with the provided scrape
+
     // console.log(wodDate.html);
     // console.log(wodDate.text);
     // const output = wodDate.find('h5').text();
@@ -22,16 +24,24 @@ request("https://comptrain.co/wod/", (error, response, html) => {
     //   .text();
     // console.log(output4);
 
-    $(".wod-date h5").each((i, j) => {
-      const date = $(j).text();
-      console.log(date);
+    // $(".wod-date h5").each((i, j) => {
+    //   const date = $(j)
+    //   console.log(date);
+    // });
+
+    const date = $(".wod-date h5").text();
+    console.log(date);
+
+    $('.wod-info p').each((i, k) => {
+      const item = $(k).text();
+      const date = $(".wod-date h5").text();
+      // console.log(date);
+
+      console.log(item);
     });
 
-    // $('.wod-info p').each((i, k) => {
-    //   const item = $(k).text();
 
-    //   console.log(item);
-    // });
+
   }
     else {
     console.log("nope");
