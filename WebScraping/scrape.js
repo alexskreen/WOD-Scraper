@@ -1,5 +1,10 @@
 const request = require('request');
 const cheerio = require('cheerio');
+const fs = require('fs');
+const writeStream = fs.createWriteStream('post.csv');
+
+// Write headers
+writeStream.write(`Date, Wod \n`);
 
 request("https://comptrain.co/wod/", (error, response, html) => {
   if (!error && response.statusCode == 200) {
@@ -44,12 +49,17 @@ request("https://comptrain.co/wod/", (error, response, html) => {
       .find('.wod-info')
       .text();
       console.log(date, wod);
+      //Write Row to CSV
+      writeStream.write(`${date}, ${wod} \n`);
+
     });
   }
     else {
     console.log("nope");
   }
 });
+
+console.log('scraping done');
 
 //     $('.wod-info h3').each((i, el) => {
 //       const item = $(el).text();
