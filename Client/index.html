@@ -9,9 +9,18 @@
 
         <h4>Add a new creator</h4>
         <input type="text" placeholder="paste YouTube url" />
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="submitChannel()">Submit</button>
+
         <div class="container"></div>
+
+
         <script>
+
+          function submitchannel() {
+            const channelValue = document.querySelector('.channel-input').value;
+            // send to server
+          }
+
           function newEl(type, attrs={}) {
             const el = document.createElement();
             for (let attr in attrs){
