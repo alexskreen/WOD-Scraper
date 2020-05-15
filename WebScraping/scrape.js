@@ -29,19 +29,22 @@ request("https://comptrain.co/wod/", (error, response, html) => {
     //   console.log(date);
     // });
 
-    const date = $(".wod-date h5").text();
-    console.log(date);
+    // const date = $(".wod-date h5").text();
+    // console.log(date);
 
-    $('.wod-info p').each((i, k) => {
-      const item = $(k).text();
-      const date = $(".wod-date h5").text();
-      // console.log(date);
+    // const date = $(".wod-date h5").text();
+    // console.log(date);
+    $('.site').each((i, k) => {
+      const date = $(k)
+      .find('.wod-date')
+      .text();
+      console.log(date);
+      const wod = $(k)
+      .find('.wod-info')
+      .text();
+      console.log(wod);
 
-      console.log(item);
     });
-
-
-
   }
     else {
     console.log("nope");
