@@ -14,7 +14,7 @@
 * Moving onto another video. I am having a hard time with STOPPING my scrape once I have the information that I need. I hope that [WEB SCRAPING made simple with JAVASCRIPT tutorial](https://www.youtube.com/watch?v=TzZ3YOUhCxo) will be of a bit more assistance. This guy makes pretty solid videos. 
 * Learning about puppeteer recorder and how to use await click with x paths [Puppeteer Series Part 5: Search result click element](https://www.youtube.com/watch?v=JN7HGnZo0c8)
 * Found a walkthrough of how to bring everything together in a full stack application using puppeteer [Building a full stack WEB SCRAPING app with JAVASCRIPT tutorial](https://www.youtube.com/watch?v=7FjhF6Hy9gY)
-* 
+* Installed puppetteer recorder
 * 
 * 
 * 
