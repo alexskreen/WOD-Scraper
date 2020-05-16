@@ -20,3 +20,10 @@ app.post("/creators", async (req, res) => {
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
+
+
+
+// this is all probably wrong. giving it a shot. 
+await page.$x("<xPath>");
+const elements = await page.$x("<xPath>");
+await elements[0].click(); 
