@@ -12,14 +12,17 @@ async function scrapeChannel(url) {
   const name = await text.jsonValue();
 
   const [el2] = await page.$x('//*[@id="img"]');
-  const src = await el2.getProperty("src");
+  const src = await el2.getProperty('src');
   const avatarURL = await src.jsonValue();
 
   browser.close();
 
+  console.log({ name, avatarURL });
   return { name, avatarURL };
 }
 
-module.exports = {
-  scrapeChannel,
-};
+scrapeChannel('https://www.youtube.com/c/codedrip');
+
+// module.exports = {
+//   scrapeChannel,
+// };
