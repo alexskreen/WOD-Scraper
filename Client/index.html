@@ -31,22 +31,24 @@
             return el;
           }
 
-          const creators = [
-            {name: 'Code Drip', img: 'https://'},
-            {name: 'Dave Lee', img: 'https://'},
-            {name: 'MKBHD', img: 'https://'},
-          ]
+          async function loadCreators() {
+            const creators = await fetch ('http://localhost:3000/creators')
+            const creators = await res.json();
 
-          const ctr = document.querySelector('.container');
-          
-          creators.forEach(creator => {
-            const card = newEl('div', {class: 'card'});
-            const title = newEl('h4', {innerText: creator.name});
-            const img = newel('img', {src: creator.img});
-            card.appendChild(title);
-            card.appendChild(img);
-            ctr.appendChild(card);
-          })
+            const ctr = document.querySelector('.container');
+            
+            creators.forEach(creator => {
+              const card = newEl('div', {class: 'card'});
+              const title = newEl('h4', {innerText: creator.name});
+              const img = newel('img', {src: creator.img});
+              card.appendChild(title);
+              card.appendChild(img);
+              ctr.appendChild(card);
+            })
+          }
+
+          loadCreators();
+
 
           </script>
           <style>
