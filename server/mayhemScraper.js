@@ -5,11 +5,11 @@ async function scrapeSite(url) {
   const page = await browser.newPage();
   await page.goto(url);
 
-  const [el] = await page.$x('//*[@id="page"]/section[2]/div[2]/div[1]');
+  const [el] = await page.$x('//*[@id="post-5ec1e56b2835bc1c34609770"]/a');
   const txt = await el.getProperty("textContent");
   const date = await txt.jsonValue();
 
-  const [el2] = await page.$x('//*[@id="page"]/section[2]/div[2]/div[2]');
+  const [el2] = await page.$x('//*[@id="block-f6597c567227bf9417e6"]/div');
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
 
@@ -18,4 +18,4 @@ async function scrapeSite(url) {
   browser.close();
 }
 
-scrapeSite("https://comptrain.co/wod/");
+scrapeSite("https://www.crossfitmayhem.com/daily-workout-posts");
