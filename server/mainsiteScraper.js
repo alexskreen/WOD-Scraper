@@ -6,13 +6,13 @@ async function scrapeSite(url) {
   await page.goto(url);
 
   const [el] = await page.$x(
-    '//*[@id="PageContainer"]/main/div[1]/div/div[1]/div/h3/a'
+    '//*[@id="dailies-column-0-0"]/section/div[1]/div/h2/a/span[2]'
   );
   const txt = await el.getProperty("textContent");
   const date = await txt.jsonValue();
 
   const [el2] = await page.$x(
-    '//*[@id="PageContainer"]/main/div[1]/div/div[1]/div/p[2]'
+    '//*[@id="dailies-column-0-0"]/section/div[2]/div[1]/div/div/article/div'
   );
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
@@ -22,4 +22,4 @@ async function scrapeSite(url) {
   browser.close();
 }
 
-scrapeSite("https://www.crossfitlinchpin.com/pages/workout-of-the-day");
+scrapeSite("https://www.crossfit.com/");
