@@ -18,7 +18,7 @@
 * Dealing with await click issue. Trying to follow [this link](https://stackoverflow.com/questions/58087966/puppeteer-how-to-click-element-using-xpath) for some help on click xpaths. I think the recorder will help. 
 * Got to the end of building and suddenly it cannot find modules. troubleshooting node versions, NVM, and JDK.
 * Hit a wall with this node issue. I am going to move on to creating more BE scrapers. [Posted on SO](https://stackoverflow.com/questions/61896624/node-js-module-not-found-in-subfolder)
-* 
+* typeorm issue solved by npm i typeorm --no-bin-links<2029>   
 * 
 * 
 * 
