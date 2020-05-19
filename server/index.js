@@ -4,8 +4,8 @@ const port = 3000;
 
 const bodyParser = require("body-parser");
 
-const scrapers = require("./../scrapers");
-const db = require("./../db");
+const scrapers = require("./scrapers");
+const db = require("./db");
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {

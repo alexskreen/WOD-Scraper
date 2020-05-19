@@ -16,7 +16,7 @@
 * Found a walkthrough of how to bring everything together in a full stack application using puppeteer [Building a full stack WEB SCRAPING app with JAVASCRIPT tutorial](https://www.youtube.com/watch?v=7FjhF6Hy9gY)
 * Installed puppetteer recorder
 * Dealing with await click issue. Trying to follow [this link](https://stackoverflow.com/questions/58087966/puppeteer-how-to-click-element-using-xpath) for some help on click xpaths. I think the recorder will help. 
-* 
+* Got to the end of building and suddenly it cannot find modules. troubleshooting node versions, NVM, and JDK.
 * 
 * 
 * 
