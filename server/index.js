@@ -1,15 +1,12 @@
 const express = require("express");
-// var app = express();
-
-// app.use(express.static('dist'));
 
 const app = express();
 const port = 3000;
 
 const bodyParser = require("body-parser");
 
-const scrapers = require('scrapers');
-const db = require('db');
+const scrapers = require('./server/scrapers');
+const db = require('./server/db');
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
