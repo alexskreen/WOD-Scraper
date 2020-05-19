@@ -1,4 +1,8 @@
 const express = require("express");
+// var app = express();
+
+// app.use(express.static('dist'));
+
 const app = express();
 const port = 3000;
 
