@@ -1,4 +1,3 @@
-
 const puppeteer = require("puppeteer");
 
 async function scrapeChannel(url) {
@@ -24,30 +23,3 @@ async function scrapeChannel(url) {
 module.exports = {
   scrapeChannel,
 };
-
-// module.exports = {
-//   scrapeChannel,
-// };
-
-
-
-
-
-
-
-
-
-
-// example comptrain scrape
-
-  // const [el] = await page.$x(
-  //   '//*[@id="page"]/section[2]/div[2]/div[1]/div/div/div/h5'
-  // );
-  // const text = await el.getProperty("textContent");
-  // const name = await text.jsonValue();
-
-  // const [el2] = await page.$x(
-  //   '//*[@id="page"]/section[2]/div[2]/div[2]/div/div[1]/h3'
-  // );
-  // const text2 = await el2.getProperty("textContent");
-  // const wod = await text2.jsonValue();
