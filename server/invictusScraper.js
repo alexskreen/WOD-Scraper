@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-async function scrapeSite(url) {
+async function scrapeSite() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -30,4 +30,4 @@ async function scrapeSite(url) {
   await browser.close();
 };
 
-scrapeSite("https://www.crossfitinvictus.com/wod/");
+scrapeSite();
