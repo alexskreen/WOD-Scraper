@@ -26,7 +26,6 @@ app.get("/gyms", async (req, res) => {
 app.post("/gyms", async (req, res) => {
   console.log(req.body);
   //this is going to need a lengthy conditional
-  if ('.gym-select' === 1){
     const gymData = await comptrainScraper.scrapeSite(req.body.gymURL);
     const gyms = await db.insertGym(
       gymData.date,
@@ -34,12 +33,6 @@ app.post("/gyms", async (req, res) => {
       req.body.gymURL
     );
     res.send(gyms);
-  }
-  else {
-    const gymData = await mayhemScraper.scrapeSite(req.body.gymURL);
-    const gyms = await db.insertGym(gymData.date, gymData.wod, req.body.gymURL);
-    res.send(gyms);
-  }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
