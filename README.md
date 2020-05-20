@@ -19,7 +19,11 @@ _Main screen, showing all workouts for that day:_
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| -------------------:|
-
+| The user should be able to select a gym from a dropdown menu|click dropdown menu and see list of gyms| Gym selected|
+| The user should be able to click submit to select their gym|User clicks submit| Gym selected|
+| The user selected gym should then been scraped|User selects comptrain| comptrainScraper runs and gathers today's data|
+| The scraped data should be fed into an MySQL database |user clicks submit| scraped data is saved to database|
+| The scraped data should be displayed in the DOM |user clicks submit| scraped data is displayed in the DOM|
 
 ## Project Concept:
 
