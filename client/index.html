@@ -46,13 +46,16 @@
 
             function selectGym() {
                 const gymURL = document.querySelector('.gym-select').value;
-                fetch('http://localhost:3000/gyms', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({gymURL})
-                })    
+                if (gymURL === 1)
+                {
+                    fetch('http://localhost:3000/gyms', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({gymURL})
+                    })    
+                }
             }
 
             function newEl(type, attrs={}) {
