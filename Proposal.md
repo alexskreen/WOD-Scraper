@@ -25,8 +25,9 @@ Any accessory and mobility work
 ##### Tools for MVP:
  * Javascript
  * Node.js
- * CheerioJS
+ * Express.js
  * Puppeteer
+ * My SQL
 
 ##### Additional Features:
  * Allow users to choose a favorite track
