@@ -24,11 +24,12 @@ const mayhemScraper = require("./mayhemScraper");
 // const misfitAthleticsScraper = require("./misfitAthleticsScraper");
 const pushJerkScraper = require("./crossfitBrisbaneTeenScraper");
 const upheavalScraper = require("./upheavalScraper");
-
 const db = require('./db');
 
-var userSelect = document.getElementById("gym-select");
-var userGym = userSelect.options[userSelect.selectedIndex].value;
+// these are all things I tried to do to get the select value.
+
+// var userSelect = document.getElementById("gym-select");
+// var userGym = userSelect.options[userSelect.selectedIndex].value;
 
 // $("#gym-select").change(function () {
 //   alert($(this).val());
@@ -51,7 +52,7 @@ app.get("/gyms", async (req, res) => {
 });
 
 app.post("/gyms", async (req, res) => {
-  console.log(req.body);
+  console.log(req.body.gym-select);
   if (userGym === 3)
   {
     const gymData = await crossfit307Scraper.scrapesite(req.body.gymURL);
