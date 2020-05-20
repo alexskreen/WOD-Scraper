@@ -40,10 +40,11 @@ async function scrapeSite() {
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
   
-  console.log({ wod });
-
   await browser.close()
 
+  return({ wod });
 };
 
-scrapeSite();
+module.exports = {
+  scrapeSite,
+};

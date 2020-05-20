@@ -25,9 +25,12 @@ async function scrapeSite(url) {
   const txt4 = await el4.getProperty("textContent");
   const wodLong = await txt4.jsonValue();
 
-  console.log({ date, wodShort, wodMedium, wodLong });
-
   browser.close();
+
+  return({ date, wodShort, wodMedium, wodLong });
+
 }
 
-scrapeSite("https://www.concept2.com/indoor-rowers/training/wod");
+module.exports = {
+  scrapeSite,
+};

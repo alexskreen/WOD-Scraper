@@ -25,9 +25,12 @@ async function scrapeSite() {
   const wod = await txt2.jsonValue();
 
 
-  console.log({ date, wod });
-
   await browser.close();
+
+  return({ date, wod });
+
 };
 
-scrapeSite();
+module.exports = {
+  scrapeSite,
+};

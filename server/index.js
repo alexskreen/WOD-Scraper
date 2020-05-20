@@ -21,7 +21,7 @@ const invictusScraper = require("./invictusScraper");
 const linchpinScraper = require("./linchpinScraper");
 const mainsiteScraper = require("./mainsiteScraper");
 const mayhemScraper = require("./mayhemScraper");
-const misfitAthleticsScraper = require("./misfitAthleticsScraper");
+// const misfitAthleticsScraper = require("./misfitAthleticsScraper");
 const pushJerkScraper = require("./crossfitBrisbaneTeenScraper");
 const upheavalScraper = require("./upheavalScraper");
 
@@ -29,6 +29,14 @@ const db = require('./db');
 
 var userSelect = document.getElementById("gym-select");
 var userGym = userSelect.options[userSelect.selectedIndex].value;
+
+// $("#gym-select").change(function () {
+//   alert($(this).val());
+// });
+
+// document.getElementById("gym-select").addEventListener("change", function () {
+//   console.log("You selected: ", this.value);
+// });
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
@@ -44,15 +52,19 @@ app.get("/gyms", async (req, res) => {
 
 app.post("/gyms", async (req, res) => {
   console.log(req.body);
-  console.log(userGym);
-  //this is going to need a lengthy conditional
-    const gymData = await comptrainScraper.scrapeSite(req.body.gymURL);
+  if (userGym === 3)
+  {
+    const gymData = await crossfit307Scraper.scrapesite(req.body.gymURL);
     const gyms = await db.insertGym(
       gymData.date,
       gymData.wod,
       req.body.gymURL
     );
-    res.send(gyms);
+    res.send(creators);
+  }
+  else {
+    console.log("your if statement didn't work")
+  }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

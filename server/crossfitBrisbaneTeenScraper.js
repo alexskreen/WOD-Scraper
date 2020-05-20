@@ -23,13 +23,15 @@ async function scrapeSite(url) {
   const txt3 = await el3.getProperty("textContent");
   const wod2 = await txt3.jsonValue();
 
-  console.log({ date, wod, wod2 });
-
   browser.close();
+
+  return({ date, wod, wod2 });
+
 }
 
-scrapeSite("https://www.crossfitbrisbane.com/blog/blog_index.html");
-
+module.exports = {
+  scrapeSite,
+};
 
 
 

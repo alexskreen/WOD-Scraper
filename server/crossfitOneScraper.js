@@ -24,7 +24,11 @@ async function scrapeSite() {
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
 
-    console.log({ date, wod });
-
   await browser.close();
+
+  return({ date, wod });
+};
+
+module.exports = {
+  scrapeSite,
 };

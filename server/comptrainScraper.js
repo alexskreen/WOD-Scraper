@@ -12,10 +12,12 @@ async function scrapeSite(url) {
   const [el2] = await page.$x('//*[@id="page"]/section[2]/div[2]/div[2]');
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
+  
+    browser.close();
 
-  console.log({ date, wod });
-
-  browser.close();
+  return({ date, wod });
 }
 
-scrapeSite("https://comptrain.co/wod/");
+module.exports = {
+  scrapeSite,
+};

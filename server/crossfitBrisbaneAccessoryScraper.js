@@ -41,9 +41,12 @@ async function scrapeSite(url) {
   const txt6 = await el6.getProperty("textContent");
   const wod5 = await txt6.jsonValue();
 
-  console.log({ date, wod, wod2, wod3, wod4, wod5 });
-
   browser.close();
+
+  return({ date, wod, wod2, wod3, wod4, wod5 });
+
 }
 
-scrapeSite("https://www.crossfitbrisbane.com/blog/blog_index.html");
+module.exports = {
+  scrapeSite,
+};

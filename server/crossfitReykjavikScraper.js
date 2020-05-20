@@ -13,9 +13,12 @@ async function scrapeSite(url) {
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
 
-  console.log({ date, wod });
-
   browser.close();
+
+  return({ date, wod });
+
 }
 
-scrapeSite("https://crossfitreykjavik.is/?lang=en");
+module.exports = {
+  scrapeSite,
+};
