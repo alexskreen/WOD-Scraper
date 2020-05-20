@@ -1,32 +1,28 @@
 const typeorm = require("typeorm");
 
-class Creator {
-  constructor(id, name, img, ytURL) {
+class Gym {
+  constructor(id, date, wod) {
     this.id = id;
-    this.name = name;
-    this.img = img;
-    this.ytURL = ytURL;
+    this.date = date;
+    this.wod = wod;
   }
 }
 
 const EntitySchema = require("typeorm").EntitySchema;
 
-const CreatorSchema = new EntitySchema({
-  name: "Creator",
-  target: Creator,
+const GymSchema = new EntitySchema({
+  name: "Gym",
+  target: Gym,
   columns: {
     id: {
       primary: true,
       type: "int",
       generated: true,
     },
-    name: {
-      type: "varchar",
-    },
-    img: {
+    date: {
       type: "text",
     },
-    ytURL: {
+    wod: {
       type: "text",
     },
   },
@@ -39,42 +35,41 @@ async function getConnection() {
     port: 3306,
     username: "root",
     password: "epicodus",
-    database: "setuptourist",
+    database: "wodScraper",
     synchronize: true,
     logging: false,
-    entities: [CreatorSchema],
+    entities: [GymSchema],
   });
 }
 
-async function getAllCreators() {
+async function getAllGyms() {
   const connection = await getConnection();
-  const creatorRepo = connection.getRepository(Creator);
-  const creators = await creatorRepo.find();
+  const gymRepo = connection.getRepository(Gym);
+  const gyms = await gymRepo.find();
   connection.close();
-  return creators;
+  return gyms;
 }
 
-async function insertCreator(name, img, ytURL) {
+async function insertGym(wod, date) {
   const connection = await getConnection();
 
   // create
-  const creator = new Creator();
-  creator.name = name;
-  creator.img = img;
-  creator.ytURL = ytURL;
+  const gym = new Gym();
+  gym.date = date;
+  gym.wod = wod;
 
   // save
-  const creatorRepo = connection.getRepository(Creator);
-  const res = await creatorRepo.save(creator);
+  const gymRepo = connection.getRepository(Gym);
+  const res = await gymRepo.save(gym);
   console.log("saved", res);
 
   // return new list
-  const allCreators = await creatorRepo.find();
+  const allGyms = await gymRepo.find();
   connection.close();
-  return allCreators;
+  return allGyms;
 }
 
 module.exports = {
-  getAllCreators,
-  insertCreator,
+  getAllGyms,
+  insertGym,
 };

@@ -6,6 +6,9 @@ const port = 3000;
 const bodyParser = require("body-parser");
 
 const scrapers = require('./scrapers');
+const comptrainScraper = require ('./comptrainScraper')
+const mayhemScraper = require("./mayhemScraper");
+
 const db = require('./db');
 
 app.use(bodyParser.json());
@@ -15,20 +18,28 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get("/creators", async (req, res) => {
-  const creators = await db.getAllCreators();
-  res.send(creators);
+app.get("/gyms", async (req, res) => {
+  const gyms = await db.getAllGyms();
+  res.send(gyms);
 });
 
-app.post("/creators", async (req, res) => {
+app.post("/gyms", async (req, res) => {
   console.log(req.body);
-  const channelData = await scrapers.scrapeChannel(req.body.channelURL);
-  const creators = await db.insertCreator(
-    channelData.name,
-    channelData.avatarURL,
-    req.body.channelURL
-  );
-  res.send(creators);
+  //this is going to need a lengthy conditional
+  if ('.gym-select' === 1){
+    const gymData = await comptrainScraper.scrapeSite(req.body.gymURL);
+    const gyms = await db.insertGym(
+      gymData.date,
+      gymData.wod,
+      req.body.gymURL
+    );
+    res.send(gyms);
+  }
+  else {
+    const gymData = await mayhemScraper.scrapeSite(req.body.gymURL);
+    const gyms = await db.insertGym(gymData.date, gymData.wod, req.body.gymURL);
+    res.send(gyms);
+  }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

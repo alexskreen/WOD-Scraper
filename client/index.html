@@ -27,9 +27,8 @@
     <option value="16">MisFit Athletics</option>
     <option value="17">Push Jerk</option>
     <option value="18">CrossFit Upheaval</option>
-
-
-  </select>
+</select>
+<button type="submit" onclick="selectGym()">submit</button>
 </div>
         
         <div class="container"></div>
@@ -38,7 +37,7 @@
 
             function selectGym() {
                 const gymURL = document.querySelector('.gym-select').value;
-                fetch('http://localhost:3000/creators', {
+                fetch('http://localhost:3000/gyms', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
