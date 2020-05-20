@@ -1,6 +1,6 @@
 # _Wod Scraper_
 
-#### _Capstone Project for Epicodus_, _May. 8th, 2020_
+#### _Capstone Project for Epicodus_, _May. 21st, 2020_
 
 #### By _**Alex Skreen**_
 
@@ -25,11 +25,11 @@ _Main screen, showing all workouts for that day:_
 
 _As an avid fan of CrossFit and fitness in general I find it incredibly time consuming to go to 10 different websites each day to find a workout that I want to do. These sites each require multiple clicks to get the necessary information, and their links change frequently. I have thought to myself on many occasions, "There has to be a better way to put all these workouts together in one place". That is why I set out to create an easy to use application that does just that. All you have to do is pull up the application, select your prefered gyms, and see all their workouts listed side by side._
 
-_MVP:_
+###_MVP:_
 * Scrape multiple gym's workouts
 * Display them in the DOM
 
-_Stretch Goals:_
+###_Stretch Goals:_
 * Allow users to choose a favorite track
  * Show user what program each site is running (if they are using current cycles)
  * Historical data: Give the user the option to choose a date to jump back to and see the workouts for a day in the past (aim for a month of historical data)
