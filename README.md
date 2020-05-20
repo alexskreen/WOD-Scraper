@@ -50,6 +50,9 @@ _Next, install Node.js by entering the following command in Terminal:_
 #### For Windows:
 _Please visit the [Node.js website](https://nodejs.org/en/download/) for installation instructions._
 
+### Node install
+* ``$ npm install mysqljs/mysql``
+
 ### Setup/install this application
 
 _Clone this repository via Terminal using the following commands:_
@@ -58,18 +61,12 @@ _Clone this repository via Terminal using the following commands:_
 * ``$ cd WOD-Scraper``
 
 _Confirm that you have navigated to the WOD Scraper directory (e.g., by entering the command_ ``pwd`` _in Terminal). Next, add a file named .env to project root directory (e.g., by entering the command_ ``touch .env`` _in Terminal)._
-* _Make an API key for the [Hiking Project Data API](https://www.hikingproject.com/data) by navigating to the linked website and clicking "sign up of login to get an API Key"_
-* _Store your API key for the Hiking Project API in first line of the .env file in the following format: API_KEY = {replace curly braces and this text with your API key}_
-* _Make an API key for the [OpenCage Geocoding API](https://opencagedata.com/api) by navigating to the linked website and selecting "sign up for your free API key" under QuickStart._
-* _Store your API key for the OpenCage Geocoding API in second line of the .env file in the following format: GEO_API_KEY = {replace curly braces and this text with your API key}_
-* _Make an API key for the [Open Weather Maps API](https://openweathermap.org/api) by navigating to the linked website and selecting "sign up."_
-* _Store your API key for the Open Weather Maps API in third line of the .env file in the following format: OPNW_API_KEY = {replace curly braces and this text with your API key}_
 
 _Next, install node package manager (npm) at the project's root directory via the following command:_
 * ``$ npm install``
 
 _Open this application via live server using the following command:_
-* ``$ npm run start``
+* ``$ node server/index.js``
 
 _To view/edit the source code of this application, open the contents of the WOD Scraper directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
 
@@ -78,11 +75,10 @@ _To view/edit the source code of this application, open the contents of the WOD 
 * _HTML_
 * _CSS_
 * _JavaScript_ 
-* _jQuery_ 
+* _Express.js_ 
 * _npm_ 
-* _Webpack_ 
 * _Node.js_
-* _Enter other data here_
+* _Puppeteer_
 
 ## Known Bugs/Contact
 
