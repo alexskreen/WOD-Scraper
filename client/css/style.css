@@ -1,5 +1,5 @@
 body {
-  background-image : url(https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80);
+  background-image : url(https://images.unsplash.com/photo-1578762560042-46ad127c95ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   text-align: center;
   margin: auto;
   display: inline-block;
@@ -14,7 +14,7 @@ form {
 }
 
 h1 {
-  color: rgb(0, 0, 0);
+  color: rgb(219, 216, 11);
   text-align: center;
   display: inline-block;
 font-family: 'Baloo Chettan 2', cursive;  width:850px; margin: auto;
@@ -32,7 +32,7 @@ font-family: 'Baloo Chettan 2', cursive;  text-align: center;
 }
 
 h3 {
-  color: rgb(6, 68, 14);
+  color: rgb(219, 216, 11);
   text-align: center;
 font-family: 'Baloo Chettan 2', cursive;  width:850px; margin: auto;
   padding-top: 10px;

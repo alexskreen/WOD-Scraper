@@ -19,9 +19,11 @@ async function scrapeSite(url) {
 
   browser.close();
 
-  return({ date, wod });
+  console.log({ date, wod });
 
 }
+
+scrapeSite("https://www.crossfitbrisbane.com/blog/wod/");
 
 module.exports = {
   scrapeSite,
