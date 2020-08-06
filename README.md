@@ -4,6 +4,8 @@
 
 #### By _**Alex Skreen**_
 
+![splash screen](images/Wod-Scraper-full.png)
+
 ## Description
 
 _This application allows a user to organize all their workouts in a single application instead of navigating to each gym's page separately_
