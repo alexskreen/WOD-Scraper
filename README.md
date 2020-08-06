@@ -4,7 +4,7 @@
 
 #### By _**Alex Skreen**_
 
-![splash screen](images/Wod-Scraper-FULL.png)
+![splash screen](./images/Wod-Scraper-FULL.png)
 
 ## Description
 
