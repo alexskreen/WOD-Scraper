@@ -6,20 +6,24 @@ async function scrapeSite(url) {
   await page.goto(url);
 
   const [el] = await page.$x(
-    '//*[@id="post-4741"]/div/header/div/span[1]/a/time'
+    '//*[@id="post-4946"]/div/header/div/span[1]/a/time'
   );
   const txt = await el.getProperty("textContent");
   const date = await txt.jsonValue();
 
-  const [el2] = await page.$x('//*[@id="post-4741"]/div/div/figure/figcaption');
+  const [el2] = await page.$x('//*[@id="post-4946"]/div/header/h2/a');
   const txt2 = await el2.getProperty("textContent");
   const wod = await txt2.jsonValue();
 
   browser.close();
 
+  console.log(date, wod);
+
   return({ date, wod });
 }
 
-module.exports = {
-  scrapeSite,
-};
+scrapeSite('https://crossfitupheaval.com/news/');
+
+// module.exports = {
+//   scrapeSite,
+// };
