@@ -21,11 +21,11 @@ async function scrapeSite(url) {
 
   console.log(date, wod);
 
-  // return({ date, wod });
+  return({ date, wod });
 }
 
 // module.exports = {
-//   scrapeSite('https://www.crossfit.com/workout/')
+//   scrapeSite()
 // };
 
 scrapeSite('https://www.crossfit.com/workout/');
