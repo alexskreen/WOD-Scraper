@@ -17,7 +17,7 @@ async function scrapeSite(url) {
 
   browser.close();
 
-  console.log(date, wod);
+  console.log( date, wod );
 
   return({ date, wod });
 }
